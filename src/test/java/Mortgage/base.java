@@ -22,7 +22,7 @@ public class base {
 		@BeforeTest
 		public WebDriver initialzeDriver() throws IOException  {
 			Properties prop = new Properties();
-			FileInputStream file = new FileInputStream("src\\main\\java\\Mortgage\\data.properties");
+			FileInputStream file = new FileInputStream("src\\test\\java\\Mortgage\\data.properties");
 			prop.load(file);
 			String browserName=prop.getProperty("browser");
 			

@@ -12,7 +12,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class RepaymentCalulator extends tase{
+public class RepaymentCalulator extends base{
 
 	@Test
 	public void homeloancalculator() throws IOException {
