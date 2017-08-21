@@ -2,7 +2,7 @@ Mortgage calculator project using Selenium Webdriver, TestNG and Maven.
 
 # Prerequisites
 - Java
-- Eclipse
+- Eclipse or any other Java IDE
 - Maven (if using eclipse, install Maven Integration for Eclipse)
 - TestNG (if using eclipse, install TestNG Integration for Eclipse)
 
