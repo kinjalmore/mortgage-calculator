@@ -1,24 +1,19 @@
-Mortage Calculator Project using Selenium Webdriver, TestNG and Maven 
+Mortgage calculator project using Selenium Webdriver, TestNG and Maven. 
 
+# Prerequisites
+- Java
+- Eclipse
+- Maven (if using eclipse, install Maven Integration for Eclipse)
+- TestNG (if using eclipse, install TestNG Integration for Eclipse)
 
+# Getting Started
 To get right up and started, you can download the project (zip) or you can checkout the project from github. 
 
+import project as existing maven project.
 
-Prerequisites
-Maven (if using eclipse, install Maven Integration for Eclipse)
-TestNG (if using eclipse, install TestNG Integration for Eclipse)
-Java
-WebDriver (Chrome, Firefox, IE, etc)
 
-To run on Chrome
-Install ChromeDriver
+# Installation
+- On successful import, the project will build and install all the dependencies
 
-Installation
-go to the project folder and open base.java
-- Add data.properties path to FileInputStream 
-
-To run on chrome
-- Add install chromedriverpath to base.java
-
-Test
-Run test as TestNG Test
+# Test
+Select the test to run as TestNG Test
