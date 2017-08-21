@@ -15,5 +15,7 @@ import project as existing maven project.
 # Installation
 - On successful import, the project will build and install all the dependencies
 
-# Test
-Select the test to run as TestNG Test
+
+# Running Tests
+- `BorrowingCalculator.java` and run as TestNG Test.
+- `RepaymentCalculator.java` and run as TestNG Test.
