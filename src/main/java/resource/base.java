@@ -1,28 +1,24 @@
-package Mortgage;
+package resource;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public class base {
 
 	public WebDriver driver;
+	public Properties prop;
 	
-		@BeforeTest
+	@BeforeTest
 		public WebDriver initialzeDriver() throws IOException  {
-			Properties prop = new Properties();
-			FileInputStream file = new FileInputStream("src\\test\\java\\Mortgage\\data.properties");
+			prop = new Properties();
+			FileInputStream file = new FileInputStream("src\\main\\java\\resource\\data.properties");
 			prop.load(file);
 			String browserName=prop.getProperty("browser");
 			
@@ -39,12 +35,11 @@ public class base {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
 			//Maximize window and Launch the ANZ Website
-			driver.manage().window().maximize();
-			driver.get("https://www.anz.co.nz/personal/home-loans-mortgages/mortgage-calculators/");
+		    driver.manage().window().maximize();
 			return driver;
 		}
 	
-		@AfterTest
+	@AfterTest
 		public WebDriver browserClose() { 		
 		    driver.quit();
 		    return driver;

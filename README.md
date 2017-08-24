@@ -2,20 +2,34 @@ Mortgage calculator project using Selenium Webdriver, TestNG and Maven.
 
 # Prerequisites
 - Java
+
+# Getting Started
+To get right up and started, you can download the project (zip) or you can checkout/clone the project from github. 
+
+
+# Running Tests
+The tests can be executed using command prompt or an IDE.
+
+### Running Tests using command prompt
+Running tests from command prompt would help in deployment with CI / CD pipeline
+- Go to command prompt specify project path
+```
+cd //projectpath
+```
+- Run following command to execute tests
+ ```
+mvn compile
+mvn test
+ ```
+
+### Using IDE
+#### Requirements
 - Eclipse or any other Java IDE
 - Maven (if using eclipse, install Maven Integration for Eclipse)
 - TestNG (if using eclipse, install TestNG Integration for Eclipse)
 
-# Getting Started
-To get right up and started, you can download the project (zip) or you can checkout the project from github. 
-
-import project as existing maven project.
+Import project as existing maven project.
 
 
-# Installation
-- On successful import, the project will build and install all the dependencies
-
-
-# Running Tests
-- `BorrowingCalculator.java` and run as TestNG Test.
-- `RepaymentCalculator.java` and run as TestNG Test.
+#### Executing Tests using IDE
+Select `testng.xml` and run as TestNG Suite.

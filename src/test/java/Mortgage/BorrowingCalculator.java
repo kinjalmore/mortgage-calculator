@@ -4,16 +4,19 @@ package Mortgage;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import resource.base;
+
 public class BorrowingCalculator extends base{
 
 	@Test
 	public void calculateBorrow() throws IOException {
+		
+		driver.get(prop.getProperty("url"));
 		
 		// Find the element that's xpath attribute and click on Borrowing calculator link
 		driver.findElement(By.xpath(".//*[@id='leftnav']/li[11]/ul/li[2]/a[2]")).click();
@@ -36,11 +39,12 @@ public class BorrowingCalculator extends base{
 		
 		//Wait for element to be visible 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".calculatedResults")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".calculatedResults")));
 				
 		//Verifying that Calculated result panel is displayed after entering all details 
 	    boolean actualString = driver.findElement(By.className("calculatedResults")).isDisplayed();
 	    Assert.assertTrue(actualString, "Calculated result panel is displayed"); 
+
 	}
 
 }

@@ -11,12 +11,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import resource.base;
+
 
 public class RepaymentCalculator extends base{
 
 	@Test
 	public void homeloancalculator() throws IOException {
 		
+		driver.get(prop.getProperty("url"));
+
 		// Find the element that's xpath attribute and click on Repayments calculator link
 		driver.findElement(By.xpath(".//*[@id='leftnav']/li[11]/ul/li[1]/a[2]")).click();
 		
@@ -51,5 +55,6 @@ public class RepaymentCalculator extends base{
 		WebElement  text = driver.findElement(By.id("js-adjustPrincipalAmountResult"));
 		String Actualtext= text.getText().replaceAll("[$,]*","");
 		Assert.assertEquals(Actualtext, expectedText);
+
 	}
 }
